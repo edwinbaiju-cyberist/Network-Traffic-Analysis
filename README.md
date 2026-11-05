@@ -28,9 +28,11 @@ An internal host on the network was compromised after navigating to a legitimate
 ### Phase 1: Host Identification
 Using NetBIOS Name Service (`nbns`) display filtering, internal broadcast traffic was analyzed to map the IP address `172.16.165.165` directly to system hostname `K34EN6W3N-PC` and physical MAC address `f0:19:af:02:9b:f1`.
 
-![Host Identification Screenshot](nbns.png)
+<img width="1920" height="1080" alt="nbns" src="https://github.com/user-attachments/assets/0cadfcb4-4c46-429f-8d5a-273c4515713b" />
+
 
 ### Phase 2: Malicious Traffic & IoC Extraction
 By filtering HTTP host requests (`http.host`), outbound traffic originating from `172.16.165.165` to external destination `37.200.69.143` was isolated. Packet #1569 confirms an unencrypted HTTP GET request attempting to fetch an exploit payload.
 
-![HTTP Traffic Analysis Screenshot](http.jpg)
+<img width="1920" height="1080" alt="http" src="https://github.com/user-attachments/assets/d90faa2f-8eb4-4993-b79b-8d8ce8d4274a" />
+
